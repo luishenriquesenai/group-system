@@ -15,6 +15,10 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                verde_logo: '#88D317', 
+                secondary: '#007bff',
+            },
         },
     },
 
