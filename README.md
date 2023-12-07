@@ -9,7 +9,7 @@ ________________________________________________________________________________
 
 
 ```
-git clone https://github.com/luishenrique98/tcc-senai-group.git
+git clone https://github.com/luishenriquesenai/group-system.git
 ```
 
 ```
