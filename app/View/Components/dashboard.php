@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class initial-page extends Component
+class dashboard extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class initial-page extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.initial-page');
+        return view('components.dashboard');
     }
 }

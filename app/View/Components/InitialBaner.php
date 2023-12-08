@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class logo-group extends Component
+class InitialBanner extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class logo-group extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.logo-group');
+        return view('components.initial-baner');
     }
 }
