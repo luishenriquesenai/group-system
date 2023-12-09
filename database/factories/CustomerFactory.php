@@ -21,11 +21,11 @@ class CustomerFactory extends Factory
             'address' => fake()->address(),
             'cep' => fake()->randomNumber(),
             'uf' => fake()->text(5),
-            'country' => fake()->text(5),
+            'country' => fake()->country(),
             'age' => fake()->randomNumber(),
-            'cpf' => fake()->randomNumber(),
+            'cpf' => fake()->randomNumber(9),
             'email' => fake()->email(),
-            'telephone' => fake()->randomNumber(),
+            'telephone' => fake()->phoneNumber(),
         ];
     }
 }

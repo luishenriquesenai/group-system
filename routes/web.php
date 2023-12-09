@@ -34,7 +34,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::resource('/consumers', CustomerController::class);
+Route::resource('/customers', CustomerController::class);
 
 Route::resource('/services-provided', ServicesProvidedController::class);
 
