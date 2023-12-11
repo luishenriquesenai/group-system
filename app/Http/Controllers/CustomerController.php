@@ -20,7 +20,7 @@ class CustomerController extends AbstractController
         $customers = $this->service->index($request->toArray());
 
         return view('customers.index', [
-            'customers' => $customers
-        ] );
+            'customers' => $customers,
+        ]);
     }
 }
