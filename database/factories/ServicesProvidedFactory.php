@@ -20,7 +20,7 @@ class ServicesProvidedFactory extends Factory
         return [
             'name' => fake()->name(),
             'value' => fake()->randomNumber(),
-            'description' => fake()->text(10),
+            'description' => fake()->text(25),
             'type_of_service' => fake()->randomElement(TypeOfServiceEnum::cases()),
         ];
     }
