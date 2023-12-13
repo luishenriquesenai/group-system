@@ -16,7 +16,7 @@ class ServicesProvidedController extends AbstractController
     {
         $servicesProvided = $this->service->index($request->toArray());
 
-        return view('ServicesProvided.index', [
+        return view('servicesProvided.index', [
             'servicesProvideds' => $servicesProvided,
         ]);
     }

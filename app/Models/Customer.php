@@ -38,4 +38,9 @@ class Customer extends Model
         'updated_at' => 'timestamp',
         'deleted_at' => 'timestamp',
     ];
+
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class, 'id_customer');
+    }
 }
