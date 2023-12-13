@@ -141,7 +141,7 @@
                                                     <td
                                                         class="px-6 py-4 w-3/5 whitespace-no-wrap border-b border-gray-200">
                                                         <div class="text-sm leading-5 text-gray-900">
-                                                            {{ $reservation->getReservedAtAttribute($reservation->reserved_at )}}
+                                                            {{ $reservation->getReservedAtAttribute($reservation->reserved_at) }}
                                                         </div>
                                                     </td>
                                                 </tr>
