@@ -4,9 +4,11 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
         <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200">
-            <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden"></div>
+            <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false"
+                class="fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden"></div>
 
-            <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-black lg:translate-x-0 lg:static lg:inset-0">
+            <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
+                class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-black lg:translate-x-0 lg:static lg:inset-0">
                 <div class="flex items-center justify-center scroll-mx-0">
                     <div class="flex justify-center w-44">
                         <x-logo-dashboard />
@@ -17,55 +19,69 @@
 
                 <nav class="mt-2">
                     <div class="py-4 overflow-y-auto">
-                        <ul class="space-y-2 font-medium">
+                        <ul id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist"
+                            class="space-y-2 font-medium">
+
                             <li>
-                                <a href="#" onclick="replaceComponent('/customers')" class="flex items-center p-3 text-white dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
-                                        <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                                        <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                                    </svg>
-                                    <span class="ms-3">Teste</span>
-                                </a>
-                            </li>
-                            <li>
-                                <button type="button" class="flex items-center w-full p-3 text-base text-white transition duration-75  group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75  dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" viewBox="0 0 448 512" fill="currentColor">
-                                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                                <button type="button"
+                                    class="flex items-center w-full p-3 text-base text-white transition duration-75  group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="w-5 h-5 text-gray-500 transition duration-75  dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                                        viewBox="0 0 448 512" fill="currentColor">
+                                        <path
+                                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
                                     </svg>
                                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Cadastro</span>
-                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4" />
                                     </svg>
                                 </button>
                                 <ul id="dropdown-example" class="hidden py-2 space-y-2">
                                     <li>
-                                        <a href="#" class="flex items-center w-full p-3 text-white transition duration-75  pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                                        <a href="#"
+                                            class="flex items-center w-full p-3 text-white transition duration-75  pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Reservas</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center w-full p-3 text-white transition duration-75  pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                                        <a href="#"
+                                            class="flex items-center w-full p-3 text-white transition duration-75  pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Serviços Prestados</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center w-full p-3 text-white transition duration-75  pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                                        <a href="#"
+                                            class="flex items-center w-full p-3 text-white transition duration-75  pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Clientes</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#" class="flex items-center p-3 text-white  dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                                        <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
-                                    </svg>
-                                    <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="flex items-center p-3 text-white  dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                                        <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
-                                    </svg>
-                                    <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
-                                </a>
+
+
+                            <li class="me-2">
+                                <button id="about-tab" data-tabs-target="#about" type="button" role="tab"
+                                    aria-controls="about" aria-selected="true"
+                                    class="flex items-center p-3 text-white  dark:text-white hover:bg-gray-100 hover:text-white dark:hover:bg-gray-700 group w-full">
+                                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M216 64c-13.3 0-24 10.7-24 24s10.7 24 24 24h16v33.3C119.6 157.2 32 252.4 32 368H480c0-115.6-87.6-210.8-200-222.7V112h16c13.3 0 24-10.7 24-24s-10.7-24-24-24H256 216zM24 400c-13.3 0-24 10.7-24 24s10.7 24 24 24H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H24z"/></svg>
+                                    <span class="ml-3">Reservas</span>
+                                </button>
                             </li>
 
+                            <li class="me-2">
+                                <button id="services-tab" data-tabs-target="#services" type="button" role="tab"
+                                aria-controls="services" aria-selected="false"
+                                    class="flex items-center p-3 text-white  dark:text-white hover:bg-gray-100 hover:text-white dark:hover:bg-gray-700 group w-full">
+                                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 32C0 14.3 14.3 0 32 0H480c17.7 0 32 14.3 32 32s-14.3 32-32 32V448c17.7 0 32 14.3 32 32s-14.3 32-32 32H304V464c0-26.5-21.5-48-48-48s-48 21.5-48 48v48H32c-17.7 0-32-14.3-32-32s14.3-32 32-32V64C14.3 64 0 49.7 0 32zm96 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H112c-8.8 0-16 7.2-16 16zM240 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H240zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H368c-8.8 0-16 7.2-16 16zM112 192c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H112zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H368zM328 384c13.3 0 24.3-10.9 21-23.8c-10.6-41.5-48.2-72.2-93-72.2s-82.5 30.7-93 72.2c-3.3 12.8 7.8 23.8 21 23.8H328z"/></svg>
+                                    <span class="ml-3">Serviços Prestados</span>
+                                </button>
+                            </li>
+
+                            <li class="me-2">
+                                <button id="statistics-tab" data-tabs-target="#statistics" type="button" role="tab"
+                                aria-controls="statistics" aria-selected="false"
+                                    class="flex items-center p-3 text-white  dark:text-white hover:bg-gray-100 hover:text-white dark:hover:bg-gray-700 group w-full">
+                                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                                    <span class="ml-3">Clientes</span>
+                                </button>
+                            </li>
                         </ul>
                     </div>
 
@@ -78,8 +94,31 @@
                     <div class="container px-6 py-8 mx-auto">
                         <div class="flex flex-col mt-8">
                             <x-option-button />
-                            <div class="inline-block min-w-full border-black border-2 mt-14"></div>
-                            <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8" id="render-table">
+                            <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 mt-12 lg:px-8"
+                                id="render-table">
+
+                                {{-- tabelas --}}
+                                <div
+                                    class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                    <ul
+                                        class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800">
+
+                                    </ul>
+                                    <div id="defaultTabContent">
+                                        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-black"
+                                            id="about" role="tabpanel" aria-labelledby="about-tab">
+                                            1...
+                                        </div>
+                                        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-black"
+                                            id="services" role="tabpanel" aria-labelledby="services-tab">
+                                            2...
+                                        </div>
+                                        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-black"
+                                            id="statistics" role="tabpanel" aria-labelledby="statistics-tab">
+                                            3...
+                                        </div>
+                                    </div>
+                                </div>
 
 
                             </div>
@@ -103,5 +142,4 @@
             });
         });
     }
-
 </script>
