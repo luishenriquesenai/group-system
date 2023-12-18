@@ -2,9 +2,9 @@
 
 namespace App\Enum;
 
-enum ReservationStatusEnum: int
+enum ReservationStatusEnum: string
 {
-    case CONFIRMED = 1;
-    case WAITING_CONFIRMATION = 2;
-    case CANCELED = 3;
+    case CONFIRMADO =  "Confirmado";
+    case AGUARDANDO_CONFIRMACAO = "Aguardando Confirmação";
+    case CANCELADO = "Cancelado";
 }

@@ -174,7 +174,7 @@
                                                                     </td>
                                                                     <td class="p-3">
                                                                         <span
-                                                                            class="{{ $reservation->statusColor }} rounded-md px-2">{{ $reservation->status->name }}</span>
+                                                                            class="{{ $reservation->statusColor }} rounded-md px-2">{{ $reservation->status->value }}</span>
                                                                     </td>
                                                                     <td class="p-3">
                                                                         {{ $reservation->getReservedAtAttribute($reservation->reserved_at) }}
@@ -210,9 +210,63 @@
                                                 }
                                             </style>
                                         </div>
-                                        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-black"
+                                        <div class="hidden p-4 bg-gray-200 rounded-lg md:p-8 dark:bg-black"
                                              id="services" role="tabpanel" aria-labelledby="services-tab">
-                                            2...
+                                            <div class="flex items-center justify-center min-h-screen bg-gray-200">
+                                                <div class="col-span-12">
+                                                    <div class="overflow-auto lg:overflow-visible ">
+                                                        <table
+                                                            class="table text-gray-400 border-separate space-y-6 text-sm">
+                                                            <thead class="bg-gray-800 text-gray-500">
+                                                            <tr>
+                                                                <th class="p-3">Nome do serviço</th>
+                                                                <th class="p-3 text-left">Tipo de serviço</th>
+                                                                <th class="p-3 text-left">Valor</th>
+                                                                <th class="p-3 text-left">Descrição</th>
+                                                                <th class="p-3 text-left">Ação</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            @foreach ($servicesProvideds as $servicesProvided)
+                                                                <tr class="bg-gray-800">
+                                                                    <td class="p-3">
+                                                                        <div class="flex align-items-center">
+                                                                            <div class="ml-3">
+                                                                                <div
+                                                                                    class="">{{ $servicesProvided->name }}</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="p-3">
+                                                                        {{ $servicesProvided->type_of_service->name}}
+                                                                    </td>
+                                                                    <td class="p-3 font-bold">
+                                                                        {{ $servicesProvided->value }}
+                                                                    </td>
+                                                                    <td class="p-3">
+                                                                        {{ $servicesProvided->description }}
+                                                                    </td>
+                                                                    <td class="p-3">
+                                                                        <a href="#"
+                                                                           class="text-gray-400 hover:text-gray-100 mr-2">
+                                                                            <i class="material-icons-outlined text-base">visibility</i>
+                                                                        </a>
+                                                                        <a href="#"
+                                                                           class="text-gray-400 hover:text-gray-100 mx-2">
+                                                                            <i class="material-icons-outlined text-base">edit</i>
+                                                                        </a>
+                                                                        <a href="#"
+                                                                           class="text-gray-400 hover:text-gray-100 ml-2">
+                                                                            <i class="material-icons-round text-base">delete_outline</i>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            @endforeach
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="hidden p-4 bg-gray-200 rounded-lg md:p-8 dark:bg-black"
                                              id="statistics" role="tabpanel" aria-labelledby="statistics-tab">
@@ -226,7 +280,7 @@
                                                                 <th class="p-3">Nome</th>
                                                                 <th class="p-3 text-left">Telefone</th>
                                                                 <th class="p-3 text-left">CPF</th>
-                                                                <th class="p-3 text-left">Action</th>
+                                                                <th class="p-3 text-left">Ação</th>
                                                             </tr>
                                                             </thead>
                                                             <tbody>
