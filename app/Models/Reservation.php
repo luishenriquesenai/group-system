@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use App\Enum\ReservationStatusEnum;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Reservation extends Model
@@ -38,18 +38,35 @@ class Reservation extends Model
         'deleted_at' => 'timestamp',
     ];
 
-    public function customer(): HasOne
+    public function customer()
     {
-        return $this->hasOne(Customer::class, 'id_customer');
+        return $this->belongsTo(Customer::class, 'id_customer');
     }
 
-    public function servicesProvided(): HasOne
+    public function servicesProvided()
     {
-        return $this->hasOne(ServicesProvided::class, 'id_services_provided');
+        return $this->belongsTo(ServicesProvided::class, 'id_services_provided');
     }
 
-    public function user(): HasOne
+    public function user()
     {
-        return $this->hasOne(User::class, 'id_user');
+        return $this->belongsTo(User::class, 'id_user');
+    }
+
+    public function getReservedAtAttribute($value)
+    {
+        $date = (int) Carbon::createFromTimestamp($value)->toDateTimeString();
+
+        return date('m / d / Y', $date);
+    }
+
+    public function getStatusColorAttribute()
+    {
+        return match ($this->status) {
+            ReservationStatusEnum::CONFIRMADO => 'bg-green-400 text-gray-50',
+            ReservationStatusEnum::AGUARDANDO_CONFIRMACAO => 'bg-yellow-400 text-gray-50',
+            ReservationStatusEnum::CANCELADO => 'bg-red-400 text-gray-50',
+            default => 'bg-gray-400 text-gray-50',
+        };
     }
 }

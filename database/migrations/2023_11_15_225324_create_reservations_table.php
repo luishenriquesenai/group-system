@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_customer')->references('id')->on('customers');
-            $table->foreignId('id_services_provided')->references('id')->on('services_provideds');
-            $table->foreignId('id_user')->references('id')->on('users');
-            $table->integer('status');
+            $table->foreignId('id_customer');
+            $table->foreignId('id_services_provided');
+            $table->foreignId('id_user');
+            $table->string('status');
             $table->dateTime('reserved_at');
             $table->timestamps();
             $table->softDeletes();

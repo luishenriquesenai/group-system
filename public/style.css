@@ -1811,7 +1811,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 
 .xl:hover{
   --tw-text-opacity: 1;
-  color: rgb(78 107 255 / var(--tw-text-opacity));
+  color: #88D317;
 }
 
 .yl:hover{
@@ -1898,7 +1898,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 
 .c:hover .mm{
-  fill: #4E6BFF;
+  fill: #88D317;
 }
 
 .b .nm{
