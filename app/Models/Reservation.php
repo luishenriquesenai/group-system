@@ -59,4 +59,14 @@ class Reservation extends Model
 
         return date('m / d / Y', $date);
     }
+
+    public function getStatusColorAttribute()
+    {
+        return match ($this->status) {
+            ReservationStatusEnum::CONFIRMED => 'bg-green-400 text-gray-50',
+            ReservationStatusEnum::WAITING_CONFIRMATION => 'bg-yellow-400 text-gray-50',
+            ReservationStatusEnum::CANCELED => 'bg-red-400 text-gray-50',
+            default => 'bg-gray-400 text-gray-50',
+        };
+    }
 }

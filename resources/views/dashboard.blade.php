@@ -173,7 +173,7 @@
                                                                         {{ $reservation->user->name }}
                                                                     </td>
                                                                     <td class="p-3">
-                                <span class="bg-yellow-400 text-gray-50  rounded-md px-2">{{ $reservation->status->name }}</span>
+                                                                        <span class="{{ $reservation->statusColor }} rounded-md px-2">{{ $reservation->status->name }}</span>
                                                                     </td>
                                                                     <td class="p-3">
                                                                         {{ $reservation->getReservedAtAttribute($reservation->reserved_at) }}
