@@ -129,3 +129,19 @@
         </div>
     </div>
 </div>
+
+<script>
+    fetch('/costumers')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao chamar a rota');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Erro:', error.message);
+        });
+</script>

@@ -74,15 +74,11 @@
 
             </div>
             <div class="flex flex-col flex-1 overflow-hidden">
-                <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+                <main class="flex-1 overflow-x-hidden overflow-y-auto bg-off_white">
                     <div class="container px-6 py-8 mx-auto">
                         <div class="flex flex-col mt-8">
                             <x-option-button />
                             <div class="inline-block min-w-full border-black border-2 mt-14"></div>
-                            <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8" id="render-table">
-
-
-                            </div>
                         </div>
                     </div>
                 </main>
