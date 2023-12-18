@@ -17,7 +17,7 @@ export default {
             },
             colors: {
                 verde_logo: '#88D317', 
-                secondary: '#007bff',
+                off_white: '#F5F5F5',
             },
         },
     },

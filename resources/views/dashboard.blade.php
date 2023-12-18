@@ -110,7 +110,7 @@
                 </nav>
             </div>
             <div class="flex flex-col flex-1 overflow-hidden">
-                <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+                <main class="flex-1 overflow-x-hidden overflow-y-auto bg-off_white">
                     <div class="container px-6 py-8 mx-auto">
                         <div class="flex flex-col mt-8">
                             <x-option-button />
