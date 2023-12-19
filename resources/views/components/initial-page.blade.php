@@ -78,8 +78,8 @@
                         </label>
                     </div>
 
-                    <a href="{{route('login')}}" :class="{ 'xl' : page === 'home', 'ok' : page === 'home xl' && stickyMenu }" >Login</a>
-                    <a href="{{route('register')}}" :class="{ 'hh/[0.15] text-black' : page === 'home', 'sh' : page === 'home bg-verde_logo ' && stickyMenu }" class="bg-verde_logo gh dk rg tc wf xf _l gi hi">Register</a>
+                    <a href="{{route('login')}}" :class="{ 'xl' : page === 'home', 'ok' : page === 'home xl' && stickyMenu }" >Entrar</a>
+                    <a href="{{route('register')}}" :class="{ 'hh/[0.15] text-black' : page === 'home', 'sh' : page === 'home bg-verde_logo ' && stickyMenu }" class="bg-verde_logo gh dk rg tc wf xf _l gi hi">Registrar</a>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
                         </p>
 
                         <div class="tc tf yo zf mb">
-                            <a href="#" class="ek jk lk gh gi hi rg ml il vc _d _l">Comece agora</a>
+                            <a href="#" class="ek jk lk gh gi hi rg ml il vc _d _l bg-verde_logo">Comece agora</a>
 
                             <span class="tc sf">
                                 <a href="#" class="inline-block ek xj kk wm">
@@ -166,14 +166,14 @@
 
         <!-- ===== Team Start ===== -->
         <div>
-            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
         </div>
         <!-- ===== Team End ===== -->
 
         <!-- ===== Services Start ===== -->
         <section class="lj tp kr">
             <!-- Section Title Start -->
-            <div x-data="{ sectionTitle: `We Offer The Best Quality Service for You`, sectionTitleText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}">
+            <div x-data="{ sectionTitle: `Oferecemos o Serviço Da Melhor Qualidade Para Você`, sectionTitleText: `Comprometidos com a Excelência: Nossa Promessa de Fornecer o Serviço de Melhor Qualidade Exclusivamente para Você.`}">
                 <div class="animate_top bb ze rj ki xn vq">
                     <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
                     <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
@@ -186,60 +186,54 @@
                     <!-- Service Item -->
                     <div class="animate_top sg oi pi zq ml il am cn _m">
                         <img src="images/icon-04.svg" alt="Icon" />
-                        <h4 class="ek zj kk wm nb _b">Crafted for Startups</h4>
+                        <h4 class="ek zj kk wm nb _b">Criado para Hospedagens</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                            convallis tortor.
+                        Desenvolvido com qualidade superior, nosso serviço é a escolha ideal para atender às suas necessidades.
                         </p>
                     </div>
 
                     <!-- Service Item -->
                     <div class="animate_top sg oi pi zq ml il am cn _m">
                         <img src="images/icon-05.svg" alt="Icon" />
-                        <h4 class="ek zj kk wm nb _b">High-quality Design</h4>
+                        <h4 class="ek zj kk wm nb _b">Design de alta qualidade</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                            convallis tortor.
+                        Design distinto e de alta qualidade, onde cada detalhe reflete excelência e inovação para destacar sua singularidade.
                         </p>
                     </div>
 
                     <!-- Service Item -->
                     <div class="animate_top sg oi pi zq ml il am cn _m">
                         <img src="images/icon-06.svg" alt="Icon" />
-                        <h4 class="ek zj kk wm nb _b">All Essential Sections</h4>
+                        <h4 class="ek zj kk wm nb _b">Todas as seções essenciais</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                            convallis tortor.
+                        Explore todas as seções essenciais, onde cada elemento é cuidadosamente elaborado para uma experiência completa e envolvente.
                         </p>
                     </div>
 
                     <!-- Service Item -->
                     <div class="animate_top sg oi pi zq ml il am cn _m">
                         <img src="images/icon-07.svg" alt="Icon" />
-                        <h4 class="ek zj kk wm nb _b">Speed Optimized</h4>
+                        <h4 class="ek zj kk wm nb _b">Velocidade otimizada</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                            convallis tortor.
+                        Potencialize sua jornada online com velocidade otimizada. Desfrute de uma experiência rápida, eficiente e sem complicações em todos os momentos.
                         </p>
                     </div>
 
                     <!-- Service Item -->
                     <div class="animate_top sg oi pi zq ml il am cn _m">
                         <img src="images/icon-05.svg" alt="Icon" />
-                        <h4 class="ek zj kk wm nb _b">Fully Customizable</h4>
+                        <h4 class="ek zj kk wm nb _b">Totalmente personalizável</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                            convallis tortor.
+                        Liberte sua criatividade! Oferecemos uma experiência totalmente personalizável, colocando o controle total nas suas mãos para moldar cada detalhe conforme suas preferências e necessidades.
                         </p>
                     </div>
 
                     <!-- Service Item -->
                     <div class="animate_top sg oi pi zq ml il am cn _m">
                         <img src="images/icon-06.svg" alt="Icon" />
-                        <h4 class="ek zj kk wm nb _b">Regular Updates</h4>
+                        <h4 class="ek zj kk wm nb _b">Atualizações regulares</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                            convallis tortor.
+                        Atualizações regulares garantem que sua experiência seja sempre a melhor. Mantemo-nos em constante evolução, oferecendo novidades e melhorias contínuas para superar suas expectativas.
                         </p>
                     </div>
                 </div>
@@ -280,14 +274,14 @@
                             <h4 x-text="plan.name" class="wj kk wm fb"></h4>
 
                             <div class="tc wf xf kg cc">
-                                <h2 :class="plan.name == 'Basic' ? 'text-green-500' : ''" x-text="`$${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`" class="fk _j kk wm"></h2>
+                                <h2 :class="plan.name == 'Basic' ? 'text-green-500' : ''" x-text="`R$${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`" class="fk _j kk wm"></h2>
                                 <span x-text="billPlan == 'monthly' ? '/por mês' : '/por ano'" class="sc ak kk wm"></span>
                             </div>
 
                             <p class="ur dc">Não é necessário cartão de crédito</p>
 
                             <!-- Button -->
-                            <a href="#" class="ek rg lk ml il gi ri" :class="plan.name == 'Growth Plan' ? 'gh sl' : 'mh tl'">
+                            <a href="#" class="ek rg lk ml il gi _l ri bg-verde_logo" :class="plan.name == 'Growth Plan' ? 'gh sl' : ''">
                                 Experimentar gratuitamente
                             </a>
 
@@ -311,241 +305,11 @@
         <!-- ===== Projects End ===== -->
 
         <!-- ===== Testimonials Start ===== -->
-        <section class="hj rp hr">
-            <!-- Section Title Start -->
-            <div x-data="{ sectionTitle: `Client’s Testimonials`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}">
-                <div class="animate_top bb ze rj ki xn vq">
-                    <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
-                    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-                </div>
-            </div>
-            <!-- Section Title End -->
-
-            <div class="bb ze ki xn ar">
-                <div class="animate_top jb cq">
-                    <!-- Slider main container -->
-                    <div class="swiper testimonial-01">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <div class="i hh rm sg vk xm bi qj">
-                                    <!-- Border Shape -->
-                                    <span class="rc je md/2 gh xg h q r"></span>
-                                    <span class="rc je md/2 mh yg h q p"></span>
-
-                                    <div class="tc sf rn tn un zf dp">
-                                        <img class="bf" src="images/testimonial.png" alt="User" />
-
-                                        <div>
-                                            <img src="images/icon-quote.svg" alt="Quote" />
-                                            <p class="ek ik xj _p kc fb">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit. In dolor diam, feugiat quis enim sed,
-                                                ullamcorper semper ligula. Mauris consequat justo
-                                                volutpat.
-                                            </p>
-
-                                            <div class="tc yf vf">
-                                                <div>
-                                                    <span class="rc ek xj kk wm zb">Devid Smith</span>
-                                                    <span class="rc">Founter @democompany</span>
-                                                </div>
-
-                                                <img class="rk" src="images/brand-light-02.svg" alt="Brand" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- If we need navigation -->
-                        <div class="tc wf xf fg jb">
-                            <div class="swiper-button-prev c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
-                                <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3.52366 7.83336L7.99366 12.3034L6.81533 13.4817L0.333663 7.00002L6.81533 0.518357L7.99366 1.69669L3.52366 6.16669L13.667 6.16669L13.667 7.83336L3.52366 7.83336Z" fill="" />
-                                </svg>
-                            </div>
-                            <div class="swiper-button-next c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
-                                <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" fill="" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ===== Testimonials End ===== -->
-
-        <!-- ===== Counter Start ===== -->
-        <section class="i pg qh rm ji hp">
-            <img src="images/shape-11.svg" alt="Shape" class="of h ga ha ke" />
-            <img src="images/shape-07.svg" alt="Shape" class="h ia o ae jf" />
-            <img src="images/shape-14.svg" alt="Shape" class="h ja ka" />
-            <img src="images/shape-15.svg" alt="Shape" class="h q p" />
-
-            <div class="bb ze i va ki xn br">
-                <div class="tc uf sn tn xf un gg">
-                    <div class="animate_top me/5 ln rj">
-                        <h2 class="gk vj zp or kk wm hc">785</h2>
-                        <p class="ek bk aq">Global Brands</p>
-                    </div>
-                    <div class="animate_top me/5 ln rj">
-                        <h2 class="gk vj zp or kk wm hc">533</h2>
-                        <p class="ek bk aq">Happy Clients</p>
-                    </div>
-                    <div class="animate_top me/5 ln rj">
-                        <h2 class="gk vj zp or kk wm hc">865</h2>
-                        <p class="ek bk aq">Winning Award</p>
-                    </div>
-                    <div class="animate_top me/5 ln rj">
-                        <h2 class="gk vj zp or kk wm hc">346</h2>
-                        <p class="ek bk aq">Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ===== Counter End ===== -->
-
-        <!-- ===== Clients Start ===== -->
-        <section class="pj vp mr">
-            <!-- Section Title Start -->
-            <div x-data="{ sectionTitle: `Trusted by Global Brands`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}">
-                <div class="animate_top bb ze rj ki xn vq">
-                    <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
-                    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-                </div>
-            </div>
-            <!-- Section Title End -->
-
-            <div class="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
-                <div class="wc rf qn zf cp kq xf wf">
-                    <a href="#" class="rc animate_top">
-                        <img class="th wl ml il zl om" src="images/brand-light-01.svg" alt="Clients" />
-                        <img class="xc sk ml il zl nm" src="images/brand-dark-01.svg" alt="Clients" />
-                    </a>
-                    <a href="#" class="rc animate_top">
-                        <img class="tk ml il zl om" src="images/brand-light-02.svg" alt="Clients" />
-                        <img class="xc sk ml il zl nm" src="images/brand-dark-02.svg" alt="Clients" />
-                    </a>
-                    <a href="#" class="rc animate_top">
-                        <img class="tk ml il zl om" src="images/brand-light-03.svg" alt="Clients" />
-                        <img class="xc sk ml il zl nm" src="images/brand-dark-03.svg" alt="Clients" />
-                    </a>
-                    <a href="#" class="rc animate_top">
-                        <img class="tk ml il zl om" src="images/brand-light-04.svg" alt="Clients" />
-                        <img class="xc sk ml il zl nm" src="images/brand-dark-04.svg" alt="Clients" />
-                    </a>
-                    <a href="#" class="rc animate_top">
-                        <img class="tk ml il zl om" src="images/brand-light-05.svg" alt="Clients" />
-                        <img class="xc sk ml il zl nm" src="images/brand-dark-05.svg" alt="Clients" />
-                    </a>
-                    <a href="#" class="rc animate_top">
-                        <img class="tk ml il zl om" src="images/brand-light-06.svg" alt="Clients" />
-                        <img class="xc sk ml il zl nm" src="images/brand-dark-06.svg" alt="Clients" />
-                    </a>
-                </div>
-            </div>
-        </section>
+        
         <!-- ===== Clients End ===== -->
 
         <!-- ===== Blog Start ===== -->
-        <section class="ji gp uq">
-            <!-- Section Title Start -->
-            <div x-data="{ sectionTitle: `Latest Blogs & News`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}">
-                <div class="animate_top bb ze rj ki xn vq">
-                    <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
-                    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-                </div>
-            </div>
-            <!-- Section Title End -->
-
-            <div class="bb ye ki xn vq jb jo">
-                <div class="wc qf pn xo zf iq">
-                    <!-- Blog Item -->
-                    <div class="animate_top sg vk rm xm">
-                        <div class="c rc i z-1 pg">
-                            <img class="w-full" src="images/blog-01.png" alt="Blog" />
-
-                            <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
-                                <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi">Read More</a>
-                            </div>
-                        </div>
-
-                        <div class="yh">
-                            <div class="tc uf wf ag jq">
-                                <div class="tc wf ag">
-                                    <img src="images/icon-man.svg" alt="User" />
-                                    <p>Musharof Chy</p>
-                                </div>
-                                <div class="tc wf ag">
-                                    <img src="images/icon-calender.svg" alt="Calender" />
-                                    <p>25 Dec, 2025</p>
-                                </div>
-                            </div>
-                            <h4 class="ek tj ml il kk wm xl eq lb">
-                                <a href="blog-single.html">Free advertising for your online business</a>
-                            </h4>
-                        </div>
-                    </div>
-
-                    <!-- Blog Item -->
-                    <div class="animate_top sg vk rm xm">
-                        <div class="c rc i z-1 pg">
-                            <img class="w-full" src="images/blog-02.png" alt="Blog" />
-
-                            <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
-                                <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi">Read More</a>
-                            </div>
-                        </div>
-
-                        <div class="yh">
-                            <div class="tc uf wf ag jq">
-                                <div class="tc wf ag">
-                                    <img src="images/icon-man.svg" alt="User" />
-                                    <p>Musharof Chy</p>
-                                </div>
-                                <div class="tc wf ag">
-                                    <img src="images/icon-calender.svg" alt="Calender" />
-                                    <p>25 Dec, 2025</p>
-                                </div>
-                            </div>
-                            <h4 class="ek tj ml il kk wm xl eq lb">
-                                <a href="blog-single.html">9 simple ways to improve your design skills</a>
-                            </h4>
-                        </div>
-                    </div>
-
-                    <!-- Blog Item -->
-                    <div class="animate_top sg vk rm xm">
-                        <div class="c rc i z-1 pg">
-                            <img class="w-full" src="images/blog-03.png" alt="Blog" />
-
-                            <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
-                                <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi">Read More</a>
-                            </div>
-                        </div>
-
-                        <div class="yh">
-                            <div class="tc uf wf ag jq">
-                                <div class="tc wf ag">
-                                    <img src="images/icon-man.svg" alt="User" />
-                                    <p>Musharof Chy</p>
-                                </div>
-                                <div class="tc wf ag">
-                                    <img src="images/icon-calender.svg" alt="Calender" />
-                                    <p>25 Dec, 2025</p>
-                                </div>
-                            </div>
-                            <h4 class="ek tj ml il kk wm xl eq lb">
-                                <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <!-- ===== Blog End ===== -->
 
         <!-- ===== Contact Start ===== -->
@@ -558,7 +322,7 @@
             <img src="images/shape-13.svg" alt="Shape" class="h r q" />
 
             <!-- Section Title Start -->
-            <div x-data="{ sectionTitle: `Let’s Stay Connected`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}">
+            <div x-data="{ sectionTitle: `Contate com Nosso Suporte`, sectionTitleText: `Estamos aqui para ajudar! Contate nosso suporte e receba assistência dedicada, proporcionando soluções rápidas e eficazes para todas as suas necessidades.`}">
                 <div class="animate_top bb ze rj ki xn vq">
                     <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
                     <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
@@ -574,26 +338,26 @@
                         <img src="images/shape-06.svg" alt="Shape" class="h la ma ne kf" />
 
                         <div class="fb">
-                            <h4 class="wj kk wm cc">Email Address</h4>
-                            <p><a href="#">support@startup.com</a></p>
+                            <h4 class="wj kk wm cc">Endereço de email</h4>
+                            <p><a href="#">suporte@group.com.br</a></p>
                         </div>
                         <div class="fb">
-                            <h4 class="wj kk wm cc">Office Location</h4>
-                            <p>76/A, Green valle, Califonia USA.</p>
+                            <h4 class="wj kk wm cc">Localização do escritório</h4>
+                            <p>Governador Valadares, Minas Gerais, Brasil.</p>
                         </div>
                         <div class="fb">
-                            <h4 class="wj kk wm cc">Phone Number</h4>
-                            <p><a href="#">+009 8754 3433 223</a></p>
+                            <h4 class="wj kk wm cc">Número de telefone</h4>
+                            <p><a href="#">(33) 99876-5432</a></p>
                         </div>
                         <div class="fb">
-                            <h4 class="wj kk wm cc">Skype Email</h4>
-                            <p><a href="#">example@yourmail.com</a></p>
+                            <h4 class="wj kk wm cc">X/Twitter</h4>
+                            <p><a href="#">@grouphoteis</a></p>
                         </div>
 
                         <span class="rc nd rh tm lc fb"></span>
 
                         <div>
-                            <h4 class="wj kk wm qb">Social Media</h4>
+                            <h4 class="wj kk wm qb">Redes sociais</h4>
                             <ul class="tc wf fg">
                                 <li>
                                     <a href="#" class="c tc wf xf ie ld rg ml il tl">
@@ -631,36 +395,36 @@
                         <form action="https://formbold.com/s/unique_form_id" method="POST">
                             <div class="tc sf yo ap zf ep qb">
                                 <div class="vd to/2">
-                                    <label class="rc ac" for="fullname">Full name</label>
-                                    <input type="text" name="fullname" id="fullname" placeholder="Devid Wonder" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+                                    <label class="rc ac" for="fullname">Nome completo</label>
+                                    <input type="text" name="fullname" id="fullname" placeholder="Devi Santos" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
                                 </div>
 
                                 <div class="vd to/2">
-                                    <label class="rc ac" for="email">Email address</label>
-                                    <input type="email" name="email" id="email" placeholder="example@gmail.com" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+                                    <label class="rc ac" for="email">Endereço de email</label>
+                                    <input type="email" name="email" id="email" placeholder="exemplo@exemplo.com" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
                                 </div>
                             </div>
 
                             <div class="tc sf yo ap zf ep qb">
                                 <div class="vd to/2">
-                                    <label class="rc ac" for="phone">Phone number</label>
-                                    <input type="text" name="phone" id="phone" placeholder="+009 3342 3432" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+                                    <label class="rc ac" for="phone">Número de telefone</label>
+                                    <input type="text" name="phone" id="phone" placeholder="(33) 99836-6638" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
                                 </div>
 
                                 <div class="vd to/2">
-                                    <label class="rc ac" for="subject">Subject</label>
-                                    <input type="text" for="subject" id="subject" placeholder="Type your subject" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+                                    <label class="rc ac" for="subject">Assunto</label>
+                                    <input type="text" for="subject" id="subject" placeholder="Digite seu assunto" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
                                 </div>
                             </div>
 
                             <div class="fb">
-                                <label class="rc ac" for="message">Message</label>
-                                <textarea placeholder="Message" rows="4" name="message" id="message" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci"></textarea>
+                                <label class="rc ac" for="message">Mensagem</label>
+                                <textarea placeholder="Escreva Aqui Sua Mensagem" rows="4" name="message" id="message" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci"></textarea>
                             </div>
 
                             <div class="tc xf">
                                 <button class="vc rg lk gh ml il hi gi _l">
-                                    Send Message
+                                Enviar mensagem
                                 </button>
                             </div>
                         </form>
@@ -879,22 +643,10 @@
                 billPlan: "monthly",
 
                 plans: [{
-                        name: "Starter",
-                        price: {
-                            monthly: 29,
-                            annually: 29 * 12 - 199,
-                        },
-                        features: [
-                            "400 GB Storaget",
-                            "Unlimited Photos & Videos",
-                            "Exclusive Support",
-                        ],
-                    },
-                    {
-                        name: "Growth Plan",
+                        name: "Plano Basico",
                         price: {
                             monthly: 59,
-                            annually: 59 * 12 - 100,
+                            annually: 59 * 12 - 199,
                         },
                         features: [
                             "400 GB Storaget",
@@ -903,10 +655,22 @@
                         ],
                     },
                     {
-                        name: "Business",
+                        name: "Plano Padrão",
                         price: {
-                            monthly: 139,
-                            annually: 139 * 12 - 100,
+                            monthly: 119,
+                            annually: 119 * 12 - 100,
+                        },
+                        features: [
+                            "400 GB Storaget",
+                            "Unlimited Photos & Videos",
+                            "Exclusive Support",
+                        ],
+                    },
+                    {
+                        name: "Plano Premium",
+                        price: {
+                            monthly: 199,
+                            annually: 199 * 12 - 100,
                         },
                         features: [
                             "400 GB Storaget",
