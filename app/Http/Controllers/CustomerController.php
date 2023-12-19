@@ -23,4 +23,11 @@ class CustomerController extends AbstractController
             'customers' => $customers,
         ]);
     }
+
+    public function store(Request $request)
+    {
+        $this->service->store($request->toArray());
+
+        return redirect()->route('dashboard');
+    }
 }
