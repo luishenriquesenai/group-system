@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('id_customer');
             $table->foreignId('id_services_provided');
             $table->foreignId('id_user');
+            $table->string('price');
             $table->string('status');
             $table->dateTime('reserved_at');
             $table->timestamps();

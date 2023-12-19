@@ -24,6 +24,7 @@ class ReservationFactory extends Factory
             'id_customer' => Customer::factory()->create()->id,
             'id_services_provided' => ServicesProvided::factory()->create()->id,
             'id_user' => User::factory()->create()->id,
+            'price' => fake()->numerify(),
             'status' => fake()->randomElement(ReservationStatusEnum::cases()),
             'reserved_at' => fake()->dateTime(),
         ];

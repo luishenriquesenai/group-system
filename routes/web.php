@@ -7,6 +7,7 @@ use App\Http\Controllers\ServicesProvidedController;
 use App\Models\Customer;
 use App\Models\Reservation;
 use App\Models\ServicesProvided;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,7 @@ Route::get('/dashboard', function () {
         'reservations' => Reservation::all(),
         'servicesProvideds' => ServicesProvided::all(),
         'customers' => Customer::all(),
+        'users' => User::all(),
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
