@@ -51,8 +51,7 @@
 
                         <div class="flex justify-between items-baseline">
 
-                            <a href="{{ route('password.request') }}" class="text-sm  hover:underline">Already
-                                registered?</a>
+                            <a href="{{ route('login') }}" class="text-sm  hover:underline">Já tem registro?</a>
                             <button type="submit"
                                 class="mt-4 bg-verde_logo text-white py-2 px-6 rounded-md hover:verde_logo ">Register</button>
                         </div>

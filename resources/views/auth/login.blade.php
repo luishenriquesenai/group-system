@@ -39,8 +39,7 @@
                         </div>
                         <div class="flex justify-between items-baseline">
 
-                            <a href="{{ route('password.request') }}" class="text-sm  hover:underline">Forgot
-                                password?</a>
+                            <a href="{{ route('register') }}" class="text-sm  hover:underline">Não tem registro?</a>
                             <button type="submit"
                                 class="mt-4 bg-verde_logo text-white py-2 px-6 rounded-md hover:verde_logo ">Login</button>
 
