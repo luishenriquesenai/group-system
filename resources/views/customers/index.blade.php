@@ -6,7 +6,7 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <div class="flex items-center justify-center min-h-screen bg-gray-900">
         <div class="col-span-12">
-            <div class="overflow-auto lg:overflow-visible ">
+            <div class="overflow-auto lg:overflow-visible">
                 <table class="table text-gray-400 border-separate space-y-6 text-sm">
                     <thead class="bg-gray-800 text-gray-500">
                     <tr>

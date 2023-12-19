@@ -20,4 +20,11 @@ class ServicesProvidedController extends AbstractController
             'servicesProvideds' => $servicesProvided,
         ]);
     }
+
+    public function store(Request $request)
+    {
+        $this->service->store($request->toArray());
+
+        return redirect()->route('dashboard');
+    }
 }
