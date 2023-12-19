@@ -21,6 +21,7 @@ class Reservation extends Model
         'id_customer',
         'id_services_provided',
         'id_user',
+        'price',
         'status',
         'reserved_at',
     ];

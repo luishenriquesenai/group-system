@@ -20,4 +20,11 @@ class ReservationController extends AbstractController
             'reservations' => $reservations,
         ]);
     }
+
+    public function store(Request $request)
+    {
+        $this->service->store($request->toArray());
+
+        return redirect()->route('dashboard');
+    }
 }

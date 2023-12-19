@@ -361,60 +361,72 @@
 
                 </div>
                 <!-- Modal body -->
-                <form class="p-4 md:p-5">
+                <form class="p-4 md:p-5" method="POST" action="{{ route('reservation.store') }}">
+                    @csrf
                     <div class="grid gap-4 mb-4 grid-cols-2">
                         <div class="col-span-2">
-                            <label for="name"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome
-                                completo</label>
-                            <input type="text" name="name" id="name"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="Nome do Cliente" required="">
+                            <label for="id_customer"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Serviço
+                                adiquirido</label>
+                            <select id="id_customer" name="id_customer"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                @foreach ($customers as $customer)
+                                    <option value={{ $customer->id }}>{{ $customer->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="col-span-2 sm:col-span-1">
-                            <label for="category"
+                            <label for="id_services_provided"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Serviço
                                 adiquirido</label>
-                            <select id="category"
+                            <select id="id_services_provided" name="id_services_provided"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                 @foreach ($servicesProvideds as $servicesProvided)
-                                    <option selected="">{{ $servicesProvided->name }}</option>
+                                    <option value={{ $servicesProvided->id }}>{{ $servicesProvided->name }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="col-span-2 sm:col-span-1">
-                            <label for="category"
+                            <label for="id_user"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Atendente</label>
-                            <select id="category"
+                            <select id="id_user" name="id_user"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                 @foreach ($users as $user)
-                                    <option selected="">{{ $user->name }}</option>
+                                    <option value={{ $user->id }}>{{ $user->name }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="col-span-2 sm:col-span-1">
                             <label for="price"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Preço</label>
-                            <input type="number" name="price" id="price"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="R$2999" required="">
+                            <select id="price" name="price"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                @foreach ($servicesProvideds as $servicesProvided)
+                                    <option selected={{ $servicesProvided->id }}>{{ $servicesProvided->value }}
+                                    </option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="col-span-2 sm:col-span-1">
-                            <label for="price"
+                            <label for="reserved_at"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Data
                                 da reserva</label>
-                            <input type="date" name="price" id="price"
+                            <input type="date" name="reserved_at" id="reserved_at"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                required="">
+                                required="" for="reserved_at" :value="__('reserved_at')">
                         </div>
-                        <div class="col-span-2">
-                            <label for="description"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Observações</label>
-                            <textarea id="description" rows="4"
-                                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Escreva uma observação aqui"></textarea>
-                        </div>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="status"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status</label>
+                        <select id="status" name="status"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                            <option value="Confirmado">{{ App\Enum\ReservationStatusEnum::CONFIRMADO->name }}</option>
+                            <option value="Aguardando Confirmação">
+                                {{ App\Enum\ReservationStatusEnum::AGUARDANDO_CONFIRMACAO->name }}</option>
+                            <option value="Cancelado">{{ App\Enum\ReservationStatusEnum::CANCELADO->name }}</option>
+                        </select>
                     </div>
                     <button type="submit"
                         class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">
@@ -568,7 +580,8 @@
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Estado</label>
                             <input type="text" name="uf" id="uf"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="Estado do cliente" required="" for="uf" :value="__('uf')">
+                                placeholder="Estado do cliente" required="" for="uf"
+                                :value="__('uf')">
                         </div>
                         <div class="col-span-2 sm:col-span-1">
                             <label for="name"
