@@ -18,7 +18,7 @@ class CustomerController extends AbstractController
     public function index(Request $request)
     {
         $customers = $this->service->index($request->toArray());
-
+        dd($customers);
         return view('customers.index', [
             'customers' => $customers,
         ]);
