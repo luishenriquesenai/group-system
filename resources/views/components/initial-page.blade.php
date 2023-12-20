@@ -28,41 +28,8 @@
             <div class="vd wo/4 sd qo f ho oo wf yf" :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
                 <nav>
                     <ul class="tc _o sf yo cg ep">
-                        <li>
-                            <a href="index.html" class="xl" :class="{ '': page === 'home' }">Home</a>
-                        </li>
-                        <li><a href="index.html#features" class="xl">Features</a></li>
-                        <li class="c i" x-data="{ dropdown: false }">
-                            <a href="#" class="xl tc wf yf bg" @click.prevent="dropdown = !dropdown" :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }">
-                                Pages
-
-                                <svg :class="{ 'wh': dropdown }" class="th mm we fd pf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                                </svg>
-                            </a>
-
-                            <!-- Dropdown Start -->
-                            <ul class="a" :class="{ 'tc': dropdown }">
-                                <li>
-                                    <a href="blog-grid.html" class="xl" :class="{ 'mk': page === 'blog-grid' }">Blog Grid</a>
-                                </li>
-                                <li>
-                                    <a href="blog-single.html" class="xl" :class="{ 'mk': page === 'blog-single' }">Blog Single</a>
-                                </li>
-                                <li>
-                                    <a href="signin.html" class="xl" :class="{ 'mk': page === 'signin' }">Sign In</a>
-                                </li>
-                                <li>
-                                    <a href="signup.html" class="xl" :class="{ 'mk': page === 'signup' }">Sign Up</a>
-                                </li>
-                                <li>
-                                    <a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a>
-                                </li>
-                            </ul>
-                            <!-- Dropdown End -->
-                        </li>
-                        <li><a href="index.html#support" id="botaoSuporte" class="xl">Suporte</a></li>
-                    </ul>
+                       
+                    </ul>   
                 </nav>
 
                 <div class="tc wf ig pb no">
@@ -435,30 +402,7 @@
         <!-- ===== Contact End ===== -->
 
         <!-- ===== CTA Start ===== -->
-        <section class="i pg gh ji">
-            <!-- Bg Shape -->
-            <img class="h p q" src="images/shape-16.svg" alt="Bg Shape" />
-
-            <div class="bb ye i z-10 ki xn dr">
-                <div class="tc uf sn tn un gg">
-                    <div class="animate_left to/2">
-                        <h2 class="fk vj zp pr lk ac">
-                            Join with 5000+ Startups Growing with Base.
-                        </h2>
-                        <p class="lk">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                            quis nibh lorem. Duis sed odio lorem. In a efficitur leo. Ut
-                            venenatis rhoncus.
-                        </p>
-                    </div>
-                    <div class="animate_right bf">
-                        <a href="#" class="vc ek kk hh rg ol il cm gi hi">
-                            Get Started Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
 
         <!-- ===== CTA End ===== -->
     </main>
@@ -470,12 +414,10 @@
                 <div class="tc uf ap gg fp">
                     <div class="animate_top zd/2 to/4">
                         <a href="index.html">
-                            <img src="images/logo-light.svg" alt="Logo" class="om" />
-                            <img src="images/logo-dark.svg" alt="Logo" class="xc nm" />
+                        <x-logo-page-inicial class="mr-24"/>
                         </a>
 
                         <p class="lc fb">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
 
                         <ul class="tc wf cg">
@@ -540,50 +482,50 @@
 
                     <div class="vd ro tc sf rn un gg vn">
                         <div class="animate_top">
-                            <h4 class="kk wm tj ec">Quick Links</h4>
+                            <h4 class="kk wm tj ec">Links Rápidos</h4>
 
                             <ul>
-                                <li><a href="#" class="sc xl vb">Home</a></li>
-                                <li><a href="#" class="sc xl vb">Product</a></li>
+                                <li><a href="#" class="sc xl vb">Inicio</a></li>
+                                <li><a href="#" class="sc xl vb">Produtos</a></li>
                                 <li>
                                     <a href="#" class="sc xl vb">
-                                        Careers
-                                        <span class="sc ek uj lk nh rg zi _i nc">Hiring</span>
+                                    Carreiras
+                                        <span class="sc ek uj lk nh rg zi _i nc">Contratando</span>
                                     </a>
                                 </li>
-                                <li><a href="#" class="sc xl vb">Pricing</a></li>
+                                <li><a href="#" class="sc xl vb">Preços</a></li>
                             </ul>
                         </div>
 
                         <div class="animate_top">
-                            <h4 class="kk wm tj ec">Services</h4>
+                            <h4 class="kk wm tj ec">Serviços</h4>
 
                             <ul>
-                                <li><a href="#" class="sc xl vb">Web Development</a></li>
-                                <li><a href="#" class="sc xl vb">Graphics Design</a></li>
-                                <li><a href="#" class="sc xl vb">Digital Marketing</a></li>
-                                <li><a href="#" class="sc xl vb">Ui/Ux Design</a></li>
+                                <li><a href="#" class="sc xl vb">Desenvolvimento web</a></li>
+                                <li><a href="#" class="sc xl vb">Design Gráfico</a></li>
+                                <li><a href="#" class="sc xl vb">Marketing digital</a></li>
+                                <li><a href="#" class="sc xl vb">Design de UI/UX</a></li>
                             </ul>
                         </div>
 
                         <div class="animate_top">
-                            <h4 class="kk wm tj ec">Support</h4>
+                            <h4 class="kk wm tj ec">Apoiar</h4>
 
                             <ul>
-                                <li><a href="#" class="sc xl vb">Company</a></li>
-                                <li><a href="#" class="sc xl vb">Press media</a></li>
-                                <li><a href="#" class="sc xl vb">Our Blog</a></li>
+                                <li><a href="#" class="sc xl vb">Empresa</a></li>
+                                <li><a href="#" class="sc xl vb">Imprensa</a></li>
+                                <li><a href="#" class="sc xl vb">Nosso blog</a></li>
                                 <li><a href="#" class="sc xl vb">Contact Us</a></li>
                             </ul>
                         </div>
 
                         <div class="animate_top">
-                            <h4 class="kk wm tj ec">Newsletter</h4>
-                            <p class="ac qe">Subscribe to receive future updates</p>
+                            <h4 class="kk wm tj ec">Boletim de Notícias</h4>
+                            <p class="ac qe">Inscreva-se para receber atualizações futuras</p>
 
                             <form action="https://formbold.com/s/unique_form_id" method="POST">
                                 <div class="i">
-                                    <input type="text" placeholder="Email address" class="vd sm _g ch pm vk xm rg gm dm dn gi mi" />
+                                    <input type="text" placeholder="Endereço de Email" class="vd sm _g ch pm vk xm rg gm dm dn gi mi" />
 
                                     <button class="h q fi">
                                         <svg class="th vm ul" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -609,14 +551,14 @@
             <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
                 <div class="animate_top">
                     <ul class="tc wf gg">
-                        <li><a href="#" class="xl">English</a></li>
-                        <li><a href="#" class="xl">Privacy Policy</a></li>
-                        <li><a href="#" class="xl">Support</a></li>
+                        <li><a href="#" class="xl">Português</a></li>
+                        <li><a href="#" class="xl">Política de Privacidade</a></li>
+                        <li><a href="#" class="xl">Suporte</a></li>
                     </ul>
                 </div>
 
                 <div class="animate_top">
-                    <p>&copy; 2025 Base. All rights reserved</p>
+                    <p>&copy; 2023 Base. Todos os direitos reservados</p>
                 </div>
             </div>
             <!-- Footer Bottom -->
@@ -649,9 +591,8 @@
                             annually: 59 * 12 - 199,
                         },
                         features: [
-                            "400 GB Storaget",
-                            "Unlimited Photos & Videos",
-                            "Exclusive Support",
+                            "Acesso em 1 Dispositivo",
+                            "Suporte Padrão",
                         ],
                     },
                     {
@@ -661,9 +602,8 @@
                             annually: 119 * 12 - 100,
                         },
                         features: [
-                            "400 GB Storaget",
-                            "Unlimited Photos & Videos",
-                            "Exclusive Support",
+                            "Acesso em até 3 Dispositivos",
+                            "Suporte Preferencial",
                         ],
                     },
                     {
@@ -673,9 +613,8 @@
                             annually: 199 * 12 - 100,
                         },
                         features: [
-                            "400 GB Storaget",
-                            "Unlimited Photos & Videos",
-                            "Exclusive Support",
+                            "Acesso ILimitado de Dispositivos",
+                            "Suporte Exclusivo",
                         ],
                     },
                 ],
