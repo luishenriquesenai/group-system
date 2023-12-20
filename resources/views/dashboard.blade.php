@@ -244,24 +244,25 @@
                                                                         <td class="p-3">
                                                                             {{ $servicesProvided->description }}
                                                                         </td>
-                                                                        <td class="p-3">
-                                                                            <a
-                                                                                class="text-gray-400 hover:text-gray-100 mr-2">
-                                                                                <i
-                                                                                    class="material-icons-outlined text-base">visibility</i>
-                                                                            </a>
+                                                                        <td class="p-3 flex mt-3">
+
                                                                             <a data-modal-target="editarSp"
                                                                                 data-modal-toggle="editarSp"
                                                                                 class="text-gray-400 hover:text-gray-100 mx-2">
                                                                                 <i
                                                                                     class="material-icons-outlined text-base">edit</i>
                                                                             </a>
-                                                                            <a data-modal-target="excluirSp"
-                                                                                data-modal-toggle="excluirSp"
+                                                                            <form method="POST"
+                                                                            action="{{ route('services-provided.destroy',  $servicesProvided->id) }}">
+                                                                            @csrf
+                                                                            @method('DELETE')
+
+                                                                            <button type="submit"
                                                                                 class="text-gray-400 hover:text-gray-100 ml-2">
                                                                                 <i
                                                                                     class="material-icons-round text-base">delete_outline</i>
-                                                                            </a>
+                                                                            </button>
+                                                                        </form>
                                                                         </td>
                                                                     </tr>
                                                                 @endforeach
@@ -308,24 +309,25 @@
                                                                         <td class="p-3 font-bold">
                                                                             {{ $customer->cpf }}
                                                                         </td>
-                                                                        <td class="p-3">
-                                                                            <a href="#"
-                                                                                class="text-gray-400 hover:text-gray-100 mr-2">
-                                                                                <i
-                                                                                    class="material-icons-outlined text-base">visibility</i>
-                                                                            </a>
+                                                                        <td class="p-3 flex mt-3">
+
                                                                             <a data-modal-target="editarCliente"
                                                                                 data-modal-toggle="editarCliente"
-                                                                                class="text-gray-400 hover:text-gray-100 mx-2">
+                                                                                class="text-gray-400 hover:text-gray-100 mx-2 ">
                                                                                 <i
                                                                                     class="material-icons-outlined text-base">edit</i>
                                                                             </a>
-                                                                            <a data-modal-target="excluirCliente"
-                                                                                data-modal-toggle="excluirCliente"
-                                                                                class="text-gray-400 hover:text-gray-100 ml-2">
+                                                                            <form method="POST"
+                                                                            action="{{ route('customers.destroy',$customer->id) }}">
+                                                                            @csrf
+                                                                            @method('DELETE')
+
+                                                                            <button type="submit"
+                                                                                class="text-gray-400 hover:text-gray-100 ">
                                                                                 <i
                                                                                     class="material-icons-round text-base">delete_outline</i>
-                                                                            </a>
+                                                                            </button>
+                                                                        </form>
                                                                         </td>
                                                                     </tr>
                                                                 @endforeach
@@ -623,71 +625,6 @@
         </div>
     </div>
 
-
-    {{-- MODAL EXCLUIR SP --}}
-
-    <div id="excluirSp" tabindex="-1"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-md max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <form action="{{ route('services-provided.destroy', $servicesProvided->id) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <div class="p-4 md:p-5 text-center">
-                        <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Deseja EXCLUIR esse Serviço
-                            Prestado?</h3>
-                        <button data-modal-hide="popup-modal" type="submit"
-                            class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
-                            Sim, tenho certeza!
-                        </button>
-                        <button data-modal-hide="popup-modal" type="button"
-                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Não,
-                            cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    {{-- MODAL EXCLUIR CLIENTE --}}
-
-    <div id="excluirCliente" tabindex="-1"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-md max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <form action="{{ route('customers.destroy', $customers->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                    <div class="p-4 md:p-5 text-center">
-                        <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Deseja EXCLUIR esse Cliente?
-                        </h3>
-                        <button data-modal-hide="popup-modal" type="submit"
-                            class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
-                            Sim, tenho certeza!
-                        </button>
-                        <button data-modal-hide="popup-modal" type="button"
-                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Não,
-                            cancelar</button>
-                    </div>
-                </form>
-            </div>  
-        </div>
-    </div>
-
-
-
-    {{-- MODAL EDITAR SP --}}
 
     <div id="editarSp" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">

@@ -27,4 +27,10 @@ class ServicesProvidedController extends AbstractController
 
         return redirect()->route('dashboard');
     }
+
+    public function destroy(int $id)
+    {
+        $this->service->destroy($id);
+        return redirect()->route('dashboard');
+    }
 }

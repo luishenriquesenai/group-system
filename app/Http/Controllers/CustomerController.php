@@ -18,7 +18,7 @@ class CustomerController extends AbstractController
     public function index(Request $request)
     {
         $customers = $this->service->index($request->toArray());
-
+        dd($customers);
         return view('customers.index', [
             'customers' => $customers,
         ]);
@@ -28,6 +28,12 @@ class CustomerController extends AbstractController
     {
         $this->service->store($request->toArray());
 
+        return redirect()->route('dashboard');
+    }
+
+    public function destroy(int $id)
+    {
+        $this->service->destroy($id);
         return redirect()->route('dashboard');
     }
 

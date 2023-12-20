@@ -61,7 +61,7 @@
                             </ul>
                             <!-- Dropdown End -->
                         </li>
-                        <li><a href="index.html#support" class="xl">Support</a></li>
+                        <li><a href="index.html#support" id="botaoSuporte" class="xl">Suporte</a></li>
                     </ul>
                 </nav>
 
@@ -683,6 +683,8 @@
         };
     </script>
     <script defer src="bundle.js"></script>
+
+    
 
 
 </x-guest-layout>
